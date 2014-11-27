@@ -8,9 +8,9 @@
         {"id":2, "content":"This is a way to extend the farewell before saying... goodbye!",
             "user":"hesitant@greetings.com", "when":Date.UTC(2000,1,1)} ];
 
-    var app = angular.module("greetingsJS", [ ]);
+    var app = angular.module("greetingsJS", ["greetingTab","greetingForm"]);
 
-    app.controller('GreetingsController', function(){
+    app.controller("GreetingsController", function(){
         this.greetings = greetings;
 
 
@@ -25,25 +25,6 @@
             this.newGreeting.when = Date.now();
             this.greetings.push(this.newGreeting);
             this.newGreeting = this.clearGreeting();
-        };
-    });
-
-    app.directive('greetingTab', function(){
-        return {
-            restrict: 'E',
-            templateUrl: 'greeting-tab/greeting-tab.html',
-            controller: function() {
-                this.tab = 1;
-
-                this.setTab = function (newValue) {
-                    this.tab = newValue;
-                };
-
-                this.isSet = function (tabName) {
-                    return this.tab === tabName;
-                }
-            },
-            controllerAs: 'tab'
         };
     });
 

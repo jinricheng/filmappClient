@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="app.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="greeting-tab/greeting-tab.js"></script>
+    <script src="greeting-form/greeting-form.js"></script>
 </head>
 <body class="list-group" ng-controller="GreetingsController as controller">
     <header>
@@ -16,27 +18,7 @@
     </div>
     <div>
         <h3>Add new greeting...</h3>
-        <section>
-            <form name="greetingForm" ng-submit="greetingForm.$valid && controller.addGreeting()" novalidate>
-                <!--  Greeting Live Preview -->
-                <h4>Preview your greentig</h4>
-                <blockquote>
-                    {{controller.newGreeting.content}} -- by {{controller.newGreeting.user}} on {{controller.newGreeting.when | date}}
-                </blockquote>
-
-                <!--  Greeting Form -->
-                <h4>Add a Greeting</h4>
-                <fieldset class="form-group">
-                    <textarea ng-model="controller.newGreeting.content" class="form-control" placeholder="Write your greeting..." title="Greeting" required></textarea>
-                </fieldset>
-                <fieldset class="form-group">
-                    <textarea type="email" ng-model="controller.newGreeting.user" class="form-control" placeholder="And your e-mail..." title="Author" required></textarea>
-                </fieldset>
-                <fieldset class="form-group">
-                    <input type="submit" class="btn btn-primary pull-right" value="Submit Greeting"/>
-                </fieldset>
-            </form>
-        </section>
+        <greeting-form></greeting-form>
     </div>
 </body>
 </html>

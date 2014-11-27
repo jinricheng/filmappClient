@@ -1,0 +1,21 @@
+<section>
+    <form name="greetingForm" ng-submit="greetingForm.$valid && controller.addGreeting()" novalidate>
+        <!--  Greeting Live Preview -->
+        <h4>Preview your greentig</h4>
+        <blockquote>
+            {{controller.newGreeting.content}} -- by {{controller.newGreeting.user}} on {{controller.newGreeting.when | date}}
+        </blockquote>
+
+        <!--  Greeting Form -->
+        <h4>Add a Greeting</h4>
+        <fieldset class="form-group">
+            <textarea ng-model="controller.newGreeting.content" class="form-control" placeholder="Write your greeting..." title="Greeting" required></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+            <textarea type="email" ng-model="controller.newGreeting.user" class="form-control" placeholder="And your e-mail..." title="Author" required></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Submit Greeting"/>
+        </fieldset>
+    </form>
+</section>
