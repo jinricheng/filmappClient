@@ -1,17 +1,15 @@
-<h3>{{greeting.id}}: {{greeting.content | limitTo:10}}...</h3>
+<h3>Greeting #{{greeting.id}}: {{greeting.content | limitTo:10}}...</h3>
 <section class="tab">
-    <ul class="nav nav-pills">
+    <ul class="nav nav-tabs">
         <li ng-class="{active: tab.isSet(1)}">
             <a href ng-click="tab.setTab(1)">Content</a></li>
         <li ng-class="{active: tab.isSet(2)}">
             <a href ng-click="tab.setTab(2)">Author</a></li>
     </ul>
-    <div ng-show="tab.isSet(1)">
-        <h4>Content</h4>
+    <div class="tab-content" ng-show="tab.isSet(1)">
         <blockquote>{{greeting.content}}</blockquote>
     </div>
-    <div ng-show="tab.isSet(2)">
-        <h4>Author</h4>
-        <blockquote>{{greeting.user}} on {{greeting.when | date}}</blockquote>
+    <div class="tab-content" ng-show="tab.isSet(2)">
+        <blockquote>{{greeting.email}} on {{greeting.date | date}}</blockquote>
     </div>
 </section>

@@ -1,6 +1,22 @@
-.ng-dirty.ng-invalid, .ng-invalid.ng-invalid-required {
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+.ng-dirty.ng-invalid, .ng-invalid.ng-invalid-required, .ng-pristine, .ng-untouched {
     border-color: red;
 }
 .ng-dirty.ng-valid {
     border-color: green;
+}
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
 }
