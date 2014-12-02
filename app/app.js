@@ -13,7 +13,7 @@
 
             this.listGreetings = function()
             {
-                $http.get("http://greetings-app.herokuapp.com/greetings.json")
+                $http.get(this.GREETINGS_API)
                     .success(function (data) {
                         greetingCtrl.greetings = data;
                     });
@@ -21,7 +21,7 @@
             this.listGreetings();
 
             this.addGreeting = function(){
-                $http.post("http://greetings-app.herokuapp.com/greetings", this.newGreeting)
+                $http.post(this.GREETINGS_API, this.newGreeting)
                     .then(function(){
                         greetingCtrl.newGreeting = {'date': Date.now()};
                         greetingCtrl.listGreetings();
