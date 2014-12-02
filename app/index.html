@@ -38,11 +38,17 @@
 
     <div class="container" ng-controller="GreetingsController as controller">
         <header>
-            <h1 class="text-center">GreetingsApp</h1>
-            <h2 class="text-center">The AngularJS Client</h2>
+            <h1 class="text-center">GreetingsJS</h1>
+            <h3 class="text-center">The AngularJS client for GreetingsApp</h3>
+            <h3>&nbsp;</h3>
         </header>
 
-        <h3 ng-show="controller.greetings == undefined">Loading greetings...</h3>
+        <div class="text-center" ng-show="controller.noGreetings()">
+            <button class="btn btn-lg btn-primary" ng-click="controller.listGreetings()">
+                <span ng-show="!controller.isLoading()">Get Greetings</span>
+                <span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
+            </button>
+        </div>
         <div ng-repeat="greeting in controller.greetings">
             <greeting-tab></greeting-tab>
         </div>

@@ -9,16 +9,24 @@
         function($http) {
             this.GREETINGS_API = "http://greetings-app.herokuapp.com/greetings";
             this.newGreeting = {'date': Date.now()};
+            this.loading = false;
             var greetingCtrl = this;
 
-            this.listGreetings = function()
-            {
+            this.isLoading = function(){
+                return this.loading;
+            };
+
+            this.noGreetings = function(){
+                return this.greetings === undefined;
+            }
+
+            this.listGreetings = function(){
+                this.loading = true;
                 $http.get(this.GREETINGS_API)
                     .success(function (data) {
                         greetingCtrl.greetings = data;
                     });
-            }
-            this.listGreetings();
+            };
 
             this.addGreeting = function(){
                 $http.post(this.GREETINGS_API, this.newGreeting)
