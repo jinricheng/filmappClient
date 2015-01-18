@@ -1,8 +1,8 @@
 {
     "version": "0.0.1",
     "name": "GreetingsJS",
-    "description": "A sample AngularJS client for the GreetingsApp",
-    "repository": "https://github.com/rogargon/greetingsJS",
+    "description": "A sample AngularJS client for the FilmsApp",
+    "repository": "https://github.com/jinricheng/filmappClient",
     "license": "MIT",
     "devDependencies": {
         "http-server": "^0.6.1"
