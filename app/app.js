@@ -7,24 +7,24 @@
 
     app.controller("GreetingsController", ["$http",
         function($http) {
-            this.GREETINGS_API = "http://greetings-app.herokuapp.com/greetings";
+            this.FILMS_API = "https://filmsapp.herokuapp.com/films";
             this.newGreeting = {'date': Date.now()};
             this.loading = false;
-            var greetingCtrl = this;
+            var  filmCtrl = this;
 
             this.isLoading = function(){
                 return this.loading;
             };
 
             this.noGreetings = function(){
-                return this.greetings === undefined;
+                return this.films === undefined;
             }
 
             this.listGreetings = function(){
                 this.loading = true;
-                $http.get(this.GREETINGS_API)
+                $http.get(this.FILMS_API)
                     .success(function (data) {
-                        greetingCtrl.greetings = data;
+                        film.films = data;
                     });
             };
 

@@ -1,15 +1,18 @@
-<h3>Greeting #{{greeting.id}}: {{greeting.content | limitTo:10}}...</h3>
+<h3>Films #{{film.id}}: {{film.title | limitTo:10}}...</h3>
 <section class="tab">
     <ul class="nav nav-tabs">
         <li ng-class="{active: tab.isSet(1)}">
-            <a href ng-click="tab.setTab(1)">Content</a></li>
-        <li ng-class="{active: tab.isSet(2)}">
-            <a href ng-click="tab.setTab(2)">Author</a></li>
+            <a href ng-click="tab.setTab(1)">Film info</a></li>
+		  <li ng-class="{active: tab.isSet(2)}">
+            <a href ng-click="tab.setTab(2)">Email</a></li>
     </ul>
     <div class="tab-content" ng-show="tab.isSet(1)">
-        <blockquote>{{greeting.content}}</blockquote>
+        <blockquote>Films Title:{{film.title}}</blockquote>
+		<blockquote>Films Year:{{film.year}}</blockquote>
+		<blockquote>Films Duration:{{film.duration}}</blockquote>
+		
     </div>
     <div class="tab-content" ng-show="tab.isSet(2)">
-        <blockquote>{{greeting.email}} on {{greeting.date | date}}</blockquote>
+        <blockquote>{{film.email}} on {{film.date | date}}</blockquote>
     </div>
 </section>
