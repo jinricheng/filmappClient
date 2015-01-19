@@ -5,7 +5,7 @@
 (function(){
     var app = angular.module("greetingsJS", ["greetingTab","greetingForm"]);
 
-    app.controller("GreetingsController", ["$http",
+    app.controller("FilmsController", ["$http",
         function($http) {
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
             this.newGreeting = {'date': Date.now()};
@@ -16,11 +16,11 @@
                 return this.loading;
             };
 
-            this.noGreetings = function(){
+            this.noFilms = function(){
                 return this.films === undefined;
             }
 
-            this.listGreetings = function(){
+            this.listFilms = function(){
                 this.loading = true;
                 $http.get(this.FILMS_API)
                     .success(function (data) {
