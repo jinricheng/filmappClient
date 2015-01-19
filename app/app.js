@@ -8,7 +8,7 @@
     app.controller("FilmsController", ["$http",
         function($http) {
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
-            this.newGreeting = {'date': Date.now()};
+            this.newFilm = {'date': Date.now()};
             this.loading = false;
             var  filmCtrl = this;
 
