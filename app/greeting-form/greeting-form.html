@@ -22,6 +22,9 @@
         </div>
 
         <!--  Greeting Form -->
+		<fieldset class="form-group">
+            <input type="email" ng-model="controller.newFilm.email" class="form-control" placeholder="And your e-mail..." title="Author" required/>
+        </fieldset>
         <fieldset class="form-group">
             <textarea ng-model="controller.newFilm.title" class="form-control" placeholder="Write your Title..." title="Film" required></textarea>
         </fieldset>
@@ -36,9 +39,6 @@
         </fieldset>
 		<fieldset class="form-group">
             <textarea ng-model="controller.newFilm.synopsis" class="form-control" placeholder="Write your synopsis..." title="Film" required></textarea>
-        </fieldset>
-        <fieldset class="form-group">
-            <input type="email" ng-model="controller.newFilm.email" class="form-control" placeholder="And your e-mail..." title="Author" required/>
         </fieldset>
         <fieldset class="form-group">
             <input type="submit" class="btn btn-primary pull-right" value="Submit New Film"/>
