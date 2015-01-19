@@ -4,8 +4,21 @@
         <div ng-show="controller.newFilm.title">
             <h5>Preview your Film</h5>
             <blockquote>
-            {{controller.newFilm.title}} {{controller.newFilm.year}} {{controller.newFilm.synopsis}}  {{controller.newFilm.runtime}} {{controller.newFilm.mpaa_rating}}-- by {{controller.newGreeting.email}} on {{controller.newGreeting.date | date}}
+            Title:{{controller.newFilm.title}}    -- by {{controller.newFilm.email}} on {{controller.newFilm.date | date}}
             </blockquote>
+			<blockquote>
+			Year:{{controller.newFilm.year}}
+			</blockquote>
+			<blockquote>
+			Mpaa_Rating:{{controller.newFilm.mpaa_rating}}
+			</blockquote>
+			<blockquote>
+			Synopsis:{{controller.newFilm.synopsis}}
+			</blockquote>
+			<blockquote>
+			Runtime:{{controller.newFilm.runtime}} 
+			</blockquote>
+			
         </div>
 
         <!--  Greeting Form -->
