@@ -4,15 +4,17 @@
         <li ng-class="{active: tab.isSet(1)}">
             <a href ng-click="tab.setTab(1)">Film info</a></li>
 		  <li ng-class="{active: tab.isSet(2)}">
-            <a href ng-click="tab.setTab(2)">Email</a></li>
+            <a href ng-click="tab.setTab(2)">Poster of film</a></li>
     </ul>
     <div class="tab-content" ng-show="tab.isSet(1)">
-        <blockquote>Films Title:{{film.title}}</blockquote>
-		<blockquote>Films Year:{{film.year}}</blockquote>
-		<blockquote>Films Runtime:{{film.runtime}}</blockquote>
-		<blockquote><img src = {{film.poster}}/></blockquote>
+        <blockquote>Title:{{film.title}}</blockquote>
+		<blockquote>Year:{{film.year}}</blockquote>
+		<blockquote>Mpaa_rating:{{film.mpaa_rating}}</blockquote>
+		<blockquote>Runtime:{{film.runtime}}</blockquote>
+		<blockquote>Synopsis:{{film.synopsis}}</blockquote>
+		<blockquote>{{film.email}} on {{film.date | date}}</blockquote>
     </div>
-    <div class="tab-content" ng-show="tab.isSet(2)">
-        <blockquote>{{film.email}} on {{film.date | date}}</blockquote>
+	<div class="tab-content" ng-show="tab.isSet(2)">
+        <blockquote><img src = {{film.poster}}/></blockquote>
     </div>
 </section>
