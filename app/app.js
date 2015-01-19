@@ -28,11 +28,11 @@
                     });
             };
 
-            this.addGreeting = function(){
-                $http.post(this.FILMS_API, this.newGreeting)
+            this.addFilm = function(){
+                $http.post(this.FILMS_API, this.newFilm)
                     .then(function(){
-                        filmCtrl.newGreeting = {'date': Date.now()};
-                        filmCtrl.listGreetings();
+                        filmCtrl.newFilm = {'date': Date.now()};
+                        filmCtrl.listFilms();
                     });
             };
         }]);
