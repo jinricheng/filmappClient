@@ -36,7 +36,7 @@
                     .then(function () {
 						this.deleteloading = false;
                     });
-				$route.reload();
+                window.location.reload(false);
 				
             };
             this.addFilm = function(){
