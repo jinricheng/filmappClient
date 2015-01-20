@@ -14,7 +14,7 @@
 		<blockquote>Synopsis:{{film.synopsis}}</blockquote>
 		<blockquote>Email:{{film.email}} on {{film.date | date}}</blockquote>
 		
-		<button class="btn btn-lg btn-primary" ng-click="controller.deleteFilms(film.id)">
+		<button class="btn btn-lg btn-primary" ng-click="controller.deleteFilm(film.id)">
                 <span ng-show="!controller.isLoading()">Delete Film</span>
 				<span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
                
