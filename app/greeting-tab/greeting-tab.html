@@ -1,4 +1,4 @@
-<h3>Films #{{film.id}}: {{film.title | limitTo:10}}</h3>
+<h3>Films #{{film.id}}: {{film.title | limitTo:20}}</h3>
 <section class="tab" ng-controller="FilmsController as controller">
     <ul class="nav nav-tabs">
         <li ng-class="{active: tab.isSet(1)}">
