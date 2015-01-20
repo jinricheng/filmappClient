@@ -55,7 +55,7 @@
                 <li ng-class="{active: option.isSet(3)}">
                     <a href ng-click="option.setTab(3)">Add Films</a></li>
             </ul>
-         <div class="tab-content" ng-show="tab.isSet(1)">
+         <div class="tab-content" ng-show="option.isSet(1)">
             <div class="text-left">
             <form class="well form-search">
                 <input type="text" ng-model="controller.title" class="input-medium search-query" placeholder="Keywords...">
@@ -67,7 +67,7 @@
             </div>
          </div>
 
-        <div class="tab-content" ng-show="tab.isSet(2)">
+        <div class="option-content" ng-show="option.isSet(2)">
            <div class="text-center" ng-show="controller.noFilms()">
             <button class="btn btn-lg btn-primary" ng-click="controller.listFilms()">
                 <span ng-show="!controller.isLoading()">Get Films List</span>
@@ -80,7 +80,7 @@
 		   </div>
         </div>
 
-       <div class="tab-content" ng-show="tab.isSet(3)">
+       <div class="option-content" ng-show="option.isSet(3)">
         <div>
             <h3>Add new Film</h3>
             <greeting-form></greeting-form>
