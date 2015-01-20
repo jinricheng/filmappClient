@@ -13,6 +13,7 @@
             this.loading = false;
 			this.deleteloading = false;
             var  filmCtrl = this;
+            this.title = "";
 
             this.isLoading = function(){
                 return this.loading;
@@ -40,9 +41,9 @@
                 window.location.reload(false);
 				
             };
-            this.searchFilm = function(title){
+            this.searchFilm = function(){
 
-                $http.get(this.SEARCH_API+title)
+                $http.get(this.SEARCH_API+this.title)
                     .success(function (data) {
                         filmCtrl.result = data;
                     });

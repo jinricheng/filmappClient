@@ -46,9 +46,8 @@
 
         <div class="text-left">
             <form class="well form-search">
-                <input type="text" ng-model="title" class="input-medium search-query" placeholder="Keywords...">
-                <button type="submit" class="btn" ng-click="controller.searchFilm(title)">Search</button>
-                <p class="help-block">Try for example: "php" or "angularjs" or "asdfg"</p>
+                <input type="text" ng-model="controller.title" class="input-medium search-query" placeholder="Keywords...">
+                <button type="submit" class="btn" ng-click="controller.searchFilm()">Search</button>
             </form>
         </div>
         <div ng-repeat="film in controller.result">
