@@ -40,7 +40,8 @@
                 window.location.reload(false);
 				
             };
-            this.searchFilm = function(title){
+            this.searchFilm = function(){
+                title = "dragon";
                 $http.get(this.SEARCH_API+title)
                     .success(function (data) {
                         filmCtrl.result = data;
