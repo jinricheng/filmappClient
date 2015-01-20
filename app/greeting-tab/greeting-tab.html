@@ -1,5 +1,5 @@
 <h3>Films #{{film.id}}: {{film.title | limitTo:10}}</h3>
-<section class="tab">
+<section class="tab" ng-controller="FilmsController as controller">
     <ul class="nav nav-tabs">
         <li ng-class="{active: tab.isSet(1)}">
             <a href ng-click="tab.setTab(1)">Film info</a></li>
@@ -15,8 +15,8 @@
 		<blockquote>Email:{{film.email}} on {{film.date | date}}</blockquote>
 		
 		<button class="btn btn-lg btn-primary" ng-click="controller.deleteFilm(film.id)">
-                <span ng-show="!controller.isLoading()">Delete Film</span>
-				<span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
+                <span ng-show="!controller.deleteloading()">Delete Film</span>
+				<span ng-show="controller.deleteloading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
                
         </button>
     </div>

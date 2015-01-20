@@ -10,6 +10,7 @@
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
             this.newFilm = {'date': Date.now()};
             this.loading = false;
+			this.deleteloading = false;
             var  filmCtrl = this;
 
             this.isLoading = function(){
@@ -29,11 +30,14 @@
             };
 
 			this.deleteFilm = function(id){
+				this.deleteloading = true;
                 this.loading = true;
                 $http.delete(this.FILMS_API+"id")
                     .then(function () {
+						this.deleteloading = false;
                         filmCtrl.listFilms();
                     });
+				
             };
             this.addFilm = function(){
                 $http.post(this.FILMS_API, this.newFilm)
