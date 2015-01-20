@@ -32,7 +32,7 @@
 			this.deleteFilm = function(id){
 				this.deleteloading = true;
                 this.loading = true;
-                $http.delete(this.FILMS_API+"id")
+                $http.delete(this.FILMS_API+"/"+id)
                     .then(function () {
 						this.deleteloading = false;
                         filmCtrl.listFilms();
