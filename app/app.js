@@ -1,7 +1,3 @@
-/**
- * Created by http://rhizomik.net/~roberto/
- */
-
 (function(){
     var app = angular.module("greetingsJS", ["greetingTab","greetingForm"]);
 
@@ -11,7 +7,7 @@
             this.SEARCH_API = "https://filmsapp.herokuapp.com/result/";
             this.newFilm = {'date': Date.now()};
             this.loading = false;
-			this.deleteloading = false;
+            this.deleteloading = false;
             var  filmCtrl = this;
             this.title = "";
 
@@ -31,15 +27,15 @@
                     });
             };
 
-			this.deleteFilm = function(id){
-				this.deleteloading = true;
+            this.deleteFilm = function(id){
+                this.deleteloading = true;
                 this.loading = true;
                 $http.delete(this.FILMS_API+"/"+id)
                     .then(function () {
-						this.deleteloading = false;
+                        this.deleteloading = false;
                     });
                 window.location.reload(false);
-				
+
             };
             this.searchFilm = function(){
 
@@ -57,5 +53,5 @@
                     });
             };
         }]);
-		
+
 }());
