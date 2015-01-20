@@ -28,6 +28,13 @@
                     });
             };
 
+			this.deleteFilm = function(){
+                this.loading = true;
+                $http.delete(this.FILMS_API)
+                    .then(function () {
+                        filmCtrl.listFilms();
+                    });
+            };
             this.addFilm = function(){
                 $http.post(this.FILMS_API, this.newFilm)
                     .then(function(){
