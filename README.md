@@ -1,7 +1,7 @@
-GreetingsJS
+FilmsAppJS
 ============
 
-Simple AngularJS client for the GreetingsApp, a Spring web application providing a RESTFul JSON API consumed by this client. The GreetingsApp is available from [https://github.com/rogargon/greetingsApp](https://github.com/rogargon/greetingsApp)
+Simple AngularJS client for the FilmsApp, a Spring web application providing a RESTFul JSON API consumed by this client. The FilmssApp is available from [https://filmsappclient.herokuapp.com/](https://filmsappclient.herokuapp.com/)
 
 To run locally, you need first node.js and its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
