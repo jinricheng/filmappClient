@@ -8,6 +8,7 @@
     app.controller("FilmsController", ["$http",
         function($http) {
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
+            this.SEARCH_API = "https://filmsapp.herokuapp.com/result";
             this.newFilm = {'date': Date.now()};
             this.loading = false;
 			this.deleteloading = false;
@@ -40,7 +41,7 @@
 				
             };
             this.searchFilm = function(title){
-                $http.get(this.FILMS_API+"/result/"+title)
+                $http.get(this.SEARCH_API+title)
                     .success(function (data) {
                         filmCtrl.result = data;
                     });
