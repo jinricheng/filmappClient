@@ -1,4 +1,4 @@
-FilmsAppJS
+#:shipit: FilmsAppJS :shipit:
 ============
 
 Simple AngularJS client for the FilmsApp, a Spring web application providing a RESTFul JSON API consumed by this client. The FilmssApp is available from [https://filmsappclient.herokuapp.com/](https://filmsappclient.herokuapp.com/). But you must care about to Load Unsafe Script, we will fix this problem soon.
