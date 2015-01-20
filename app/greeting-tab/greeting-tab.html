@@ -13,6 +13,11 @@
 		<blockquote>Runtime:{{film.runtime}}</blockquote>
 		<blockquote>Synopsis:{{film.synopsis}}</blockquote>
 		<blockquote>Email:{{film.email}} on {{film.date | date}}</blockquote>
+		
+		<button class="btn btn-lg btn-primary" ng-click="controller.deleteFilms()">
+                <span ng-show="!controller.isLoading()">Delete Film</span>
+               
+        </button>
     </div>
 	<div class="tab-content" ng-show="tab.isSet(2)">
         <blockquote><img ng-src = {{film.poster}}/></blockquote>
