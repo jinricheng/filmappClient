@@ -6,7 +6,7 @@
     var app = angular.module("greetingsJS", ["greetingTab","greetingForm"]);
 
     app.controller("FilmsController", ["$http",
-        function($scope,$http) {
+        function($http) {
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
             this.SEARCH_API = "https://filmsapp.herokuapp.com/result/";
             this.newFilm = {'date': Date.now()};
@@ -40,9 +40,9 @@
                 window.location.reload(false);
 				
             };
-            this.searchFilm = function(){
+            this.searchFilm = function(title){
 
-                $http.get(this.SEARCH_API+$scope.keywords)
+                $http.get(this.SEARCH_API+title)
                     .success(function (data) {
                         filmCtrl.result = data;
                     });
