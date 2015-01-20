@@ -45,49 +45,32 @@
             <h3>&nbsp;</h3>
         </header>
 
-    </div>
-     <section class="option">
-            <ul class="nav nav-tabs">
-                <li ng-class="{active: option.isSet(1)}">
-                    <a href ng-click="option.setTab(1)">Search Movie</a></li>
-                <li ng-class="{active: option.isSet(2)}">
-                    <a href ng-click="option.setTab(2)">List Films</a></li>
-                <li ng-class="{active: option.isSet(3)}">
-                    <a href ng-click="option.setTab(3)">Add Films</a></li>
-            </ul>
-         <div class="tab-content" ng-show="option.isSet(1)">
-            <div class="text-left">
+        <div class="text-left">
             <form class="well form-search">
                 <input type="text" ng-model="controller.title" class="input-medium search-query" placeholder="Keywords...">
                 <button type="submit" class="btn" ng-click="controller.searchFilm()">Search</button>
             </form>
-            </div>
-            <div ng-repeat="film in controller.result">
-            <greeting-tab></greeting-tab>
-            </div>
          </div>
 
-        <div class="option-content" ng-show="option.isSet(2)">
-           <div class="text-center" ng-show="controller.noFilms()">
+        <div ng-repeat="film in controller.result">
+            <greeting-tab></greeting-tab>
+        </div>
+
+        <div class="text-center" ng-show="controller.noFilms()">
             <button class="btn btn-lg btn-primary" ng-click="controller.listFilms()">
                 <span ng-show="!controller.isLoading()">Get Films List</span>
                 <span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
             </button>
-           </div>
-
-           <div ng-repeat="film in controller.films">
-                <greeting-tab></greeting-tab>
-		   </div>
         </div>
 
-       <div class="option-content" ng-show="option.isSet(3)">
+        <div ng-repeat="film in controller.films">
+            <greeting-tab></greeting-tab>
+		</div>
         <div>
             <h3>Add new Film</h3>
             <greeting-form></greeting-form>
         </div>
-        </div>
-       </section>
-    <!-- /.container -->
+    </div><!-- /.container -->
 
 </body>
 </html>

@@ -3,27 +3,7 @@
  */
 
 (function(){
-    var app = angular.module("greetingsJS", ["greetingTab","optionTab","greetingForm"]);
-
-
-    app.directive('optionTab', function(){
-        return {
-            restrict: 'E',
-            templateUrl: 'index.html',
-            controller: function() {
-                this.tab = 1;
-
-                this.setTab = function (newValue) {
-                    this.tab = newValue;
-                };
-
-                this.isSet = function (tabName) {
-                    return this.tab === tabName;
-                }
-            },
-            controllerAs: 'option'
-        };
-    });
+    var app = angular.module("greetingsJS", ["greetingTab","greetingForm"]);
 
     app.controller("FilmsController", ["$http",
         function($http) {
