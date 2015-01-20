@@ -7,12 +7,12 @@
             <a href ng-click="tab.setTab(2)">Poster of film</a></li>
     </ul>
     <div class="tab-content" ng-show="tab.isSet(1)">
-        <blockquote>Title:{{film.title}}</blockquote>
-		<blockquote>Year:{{film.year}}</blockquote>
-		<blockquote>Mpaa_rating:{{film.mpaa_rating}}</blockquote>
-		<blockquote>Runtime:{{film.runtime}}</blockquote>
-		<blockquote>Synopsis:{{film.synopsis}}</blockquote>
-		<blockquote>Email:{{film.email}} on {{film.date | date}}</blockquote>
+        <blockquote>Title: {{film.title}}</blockquote>
+		<blockquote>Year: {{film.year}}</blockquote>
+		<blockquote>Mpaa_rating: {{film.mpaa_rating}}</blockquote>
+		<blockquote>Runtime: {{film.runtime}}</blockquote>
+		<blockquote>Synopsis: {{film.synopsis}}</blockquote>
+		<blockquote>Email: {{film.email}} on {{film.date | date}}</blockquote>
 		
 		<button class="btn btn-lg btn-primary" ng-click="controller.deleteFilm(film.id)">
                 <span ng-show="!controller.deleteloading()">Delete Film</span>
