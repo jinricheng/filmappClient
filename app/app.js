@@ -35,7 +35,7 @@
                 $http.delete(this.FILMS_API+"/"+id)
                     .then(function () {
 						this.deleteloading = false;
-                        filmCtrl.listFilms();
+                        $route.reload();
                     });
 				
             };
