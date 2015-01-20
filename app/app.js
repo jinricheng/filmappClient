@@ -24,6 +24,7 @@
             controllerAs: 'option'
         };
     });
+
     app.controller("FilmsController", ["$http",
         function($http) {
             this.FILMS_API = "https://filmsapp.herokuapp.com/films";
