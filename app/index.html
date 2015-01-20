@@ -44,12 +44,20 @@
             <h3>&nbsp;</h3>
         </header>
 
+        <div class="text-left" ng-show="controller.noFilms()">
+            <button class="btn btn-lg btn-primary" ng-click="controller.listFilms()">
+                <span ng-show="!controller.isLoading()">Get Films List</span>
+                <span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
+            </button>
+        </div>
+
         <div class="text-right" ng-show="controller.noFilms()">
             <button class="btn btn-lg btn-primary" ng-click="controller.listFilms()">
                 <span ng-show="!controller.isLoading()">Get Films List</span>
                 <span ng-show="controller.isLoading()"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</span>
             </button>
         </div>
+
         <div ng-repeat="film in controller.films">
             <greeting-tab></greeting-tab>
 		</div>
