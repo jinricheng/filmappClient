@@ -28,9 +28,9 @@
                     });
             };
 
-			this.deleteFilm = function(){
+			this.deleteFilm = function(id){
                 this.loading = true;
-                $http.delete(this.FILMS_API)
+                $http.delete(this.FILMS_API+"id")
                     .then(function () {
                         filmCtrl.listFilms();
                     });
