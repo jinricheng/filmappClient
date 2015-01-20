@@ -39,6 +39,13 @@
                 window.location.reload(false);
 				
             };
+            this.searchFilm = function(title){
+                $http.get(this.FILMS_API+"/result/"+title)
+                    .success(function (data) {
+                        filmCtrl.result = data;
+                    });
+
+            }
             this.addFilm = function(){
                 $http.post(this.FILMS_API, this.newFilm)
                     .then(function(){
